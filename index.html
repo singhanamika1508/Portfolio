@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Anamika Singh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 4px;
+        }
+
+        /* Active nav link */
+        .nav-link.active {
+            color: #3b82f6;
+            font-weight: 600;
+        }
+
+        /* Project card hover effect */
+        .project-card {
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-blue-500">Portfolio</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link hover:text-blue-500 transition">Home</a>
+                    <a href="#about" class="nav-link hover:text-blue-500 transition">About</a>
+                    <a href="#projects" class="nav-link hover:text-blue-500 transition">Internships</a>
+                    <!-- <a href="#skills" class="nav-link hover:text-blue-500 transition">Skills</a> -->
+                    <a href="#experience" class="nav-link hover:text-blue-500 transition">Experience</a>
+                    <!-- <a href="#testimonials" class="nav-link hover:text-blue-500 transition">Testimonials</a> -->
+                </div>
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden mt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="#home" class="nav-link hover:text-blue-500 transition">Home</a>
+                    <a href="#about" class="nav-link hover:text-blue-500 transition">About</a>
+                    <a href="#projects" class="nav-link hover:text-blue-500 transition">Projects</a>
+                    <!-- <a href="#skills" class="nav-link hover:text-blue-500 transition">Skills</a> -->
+                    <a href="#experience" class="nav-link hover:text-blue-500 transition">Experience</a>
+                    <!-- <a href="#testimonials" class="nav-link hover:text-blue-500 transition">Testimonials</a> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 py-16 md:py-24">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 animate-fadeIn">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-blue-500">Anamika Singh
+                        </span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-600">Aspiring Product Manager & Data
+                        Analyst</h2>
+                    <p class="text-lg mb-8 text-gray-600 max-w-lg">
+                        I am a passionate individual with a strong foundation in data analytics, product management, and
+                        workplace skills. I thrive on solving problems, analyzing data, and creating impactful
+                        solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#projects"
+                            class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition shadow-lg">
+                            View My Work
+                        </a>
+                        <a href="#contact"
+                            class="border-2 border-blue-500 text-blue-500 hover:bg-blue-50 px-6 py-3 rounded-lg transition">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center animate-fadeIn delay-200">
+                    <div class="relative">
+                        <div
+                            class="w-64 h-64 md:w-80 md:h-80 bg-blue-100 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl">
+                            <img src="Assets/profile.png" alt="Anamika Singh" class="w-full h-full object-cover">
+                            alt="Anamika Singh" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg">
+                            <div class="flex items-center">
+                                <div
+                                    class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white">
+                                    <i class="fas fa-chart-line text-xl"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="font-bold">5+ Internships</p>
+                                    <p class="text-sm text-gray-500">Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 animate-fadeIn">About <span
+                    class="text-blue-500">Me</span></h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center animate-fadeIn delay-100">
+                    <div class="w-64 h-64 md:w-72 md:h-72 bg-blue-100 rounded-lg overflow-hidden shadow-lg">
+                        <img src="Assets/profile.png" alt="Anamika Singh" class="w-full h-full object-cover">
+
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12 animate-fadeIn delay-200">
+                    <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
+                    <p class="text-gray-600 mb-6">
+                        I am a Bachelor of Computer Application graduate with a CGPA of 9.14 from Arka Jain University.
+                        My
+                        journey includes multiple internships in product management, HR, and market research, where I
+                        honed my skills in data analytics, problem-solving, and leadership.
+                    </p>
+                    <p class="text-gray-600 mb-8">
+                        I am proficient in Python, SQL, and C++, and skilled in tools like Power BI, Microsoft Excel,
+                        and
+                        PowerPoint. My workplace skills include effective communication, critical thinking, and
+                        adaptability, which I leverage to deliver impactful results.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span>Data Analytics</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span>Product Management</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span>Leadership</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span>Team Collaboration</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://drive.google.com/file/d/1rUOQLucxAXi8_G_nYKWR_DcU8kmDw5Ta/view?usp=drive_link"
+                            class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition flex items-center">
+                            <i class="fas fa-download mr-2"></i> Download CV
+                        </a>
+                        <a href="#contact"
+                            class="border border-blue-500 text-blue-500 hover:bg-blue-50 px-6 py-2 rounded-lg transition">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 animate-fadeIn">My <span
+                    class="text-blue-500">Internships</span></h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto animate-fadeIn delay-100">
+                Here are some of my recent projects. Each one was carefully crafted to solve specific problems and
+                deliver value.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md animate-fadeIn delay-200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Assets/Zomato_logo.png"
+                            alt="Project 1" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Zomato Review System</h3>
+                        <div class="flex justify-between items mb-1">
+                            <!-- <span class="text-blue-500 block">SYMPLORA</span> -->
+                            <!-- <span class="text-blue-500 text-sm">[Nov 2024 - Jan 2025]</span> -->
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            For Zomato, I reimagined the review system to make user feedback seamless, engaging, and
+                            rewarding. Key features included an Audio-to-Text Review Assistant for effortless review
+                            submission, smart prompts for detailed feedback, real-time sentiment analysis for respectful
+                            tone, and multi-language support for inclusivity. A Rewards System incentivized
+                            participation with credits redeemable for discounts and freebies, while AI moderation
+                            ensured authenticity. These enhancements simplified feedback, gamified the process, and
+                            fostered trust and engagement in the Zomato community.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="https://docs.google.com/presentation/d/1LReIEj942XQxobi-zfDOD8MrukJbIeIM/edit?usp=drive_link&ouid=102118311730763746556&rtpof=true&sd=true" class="text-blue-500 hover:text-blue-700">
+                                <i class="fas fa-external-link-alt"></i> PPT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md animate-fadeIn delay-300">
+                    <div class="h-48 overflow-hidden py-1">
+                        <img src="Assets/unnamed.png"
+                            alt="Project 2" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Recipe Cup</h3>
+                        <div class="flex justify-between items mb-1">
+                            <!-- <span class="text-blue-500 block">WIZDOM</span> -->
+                            <!-- <span class="text-blue-500 text-sm">[July 2024 - Sept 2024]</span> -->
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Recipe Cup is a food-tech project I worked on to empower passionate home chefs and connect
+                            them with food enthusiasts. I contributed to creating a zero-commission model that allows
+                            chefs to sell signature dishes, plan pre-orders, and showcase homemade ingredients like
+                            sauces and spices. I also designed a Weekly Menu Planner with dietary filters and
+                            categorized meal options to make meal discovery easier. By integrating detailed product
+                            descriptions, allergen transparency, and real-time availability, I aimed to deliver a
+                            seamless and inclusive user experience while fostering a vibrant community that celebrates
+                            food and creativity.
+                        </p>
+                        <div class="flex space-x-3">
+                            <!-- <a href="#" class="text-blue-500 hover:text-blue-700">
+                                <i class="fas fa-external-link-alt"></i> PPT
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700">
+                                <i class="fas fa-external-link-alt"></i> Figma
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md animate-fadeIn delay-400">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Assets/1741773245_groww.jpg"
+                            alt="Project 3" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Groww</h3>
+                        <div class="flex justify-between items mb-1">
+                            <!-- <span class="text-blue-500 text-sm">[Mar 2024 - Apr 2024]</span> -->
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            The Groww project focused on enhancing the user experience of a D2C investment platform by
+                            addressing beginner support, personalized insights, and reactive customer service
+                            challenges. I improved onboarding flows with step-by-step guidance and introduced the 'Guide
+                            Me' feature to provide personalized investment recommendations. Tools like 'Invest Like a
+                            Pro' and 'Groww with Clarity' were refined for better usability and transparency. By
+                            integrating interactive analytics, educational resources, and key performance metrics, the
+                            project positioned Groww as a user-centric platform fostering trust and engagement.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="https://docs.google.com/presentation/d/1cCkg6eLP5b-mBeJrF-bYgAmqpfFA-dd-/edit?usp=drive_link&ouid=102118311730763746556&rtpof=true&sd=true" class="text-blue-500 hover:text-blue-700">
+                                <i class="fas fa-external-link-alt"></i> PPT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md animate-fadeIn delay-500">
+                    <div class="h-48 overflow-hidden border-2 border-black-100">
+                        <img src="Assets/medium4864.jpg"
+                            alt="Project 2" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Medium</h3>
+                        <div class="flex justify-between items mb-1">
+                            <!-- <span class="text-blue-500 text-sm">[Dec 2023 - Jan 2024]</span> -->
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            For the Medium project, I focused on improving content discovery, enhancing the reading
+                            experience, and boosting writer engagement. I proposed AI-driven recommendations for
+                            personalized content discovery, interactive analytics to help writers understand audience
+                            behavior, and updates to the Partner Program for greater transparency. By defining metrics
+                            like content consumption and writer retention, I worked to strengthen connections between
+                            readers and writers and enhance Medium’s overall user experience.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="https://docs.google.com/presentation/d/1c-aLDNE2A6kV7ypVMByU9wDiNyC4yK6d/edit?usp=drive_link&ouid=102118311730763746556&rtpof=true&sd=true" class="text-blue-500 hover:text-blue-700">
+                                <i class="fas fa-external-link-alt"></i> PPT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md animate-fadeIn delay-600">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Assets/bb-logo.png"
+                            alt="Project 2" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Big Basket Now</h3>
+                        <div class="flex justify-between items mb-1">
+                            <!-- <span class="text-blue-500 text-sm">[June 2023 - July 2023]</span> -->
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            For this project, I worked on improving the user experience by addressing challenges like a
+                            cluttered UI, low-quality visuals, and unclear product details. Solutions included a
+                            redesigned interface with high-quality images, better delivery address management, and a
+                            dynamic flash sale bar to highlight deals. I also introduced features like 'Recipe Roulette'
+                            for personalized meal ideas and a 'Smart Coupons' system offering tailored discounts and
+                            loyalty rewards. These enhancements aimed to boost engagement, retention, and sales.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="https://docs.google.com/presentation/d/1SbZpJQENprSHjRSnM65Q_qe_bIL7kcgR/edit?usp=drive_link&ouid=102118311730763746556&rtpof=true&sd=true" class="text-blue-500 hover:text-blue-700">
+                                <i class="fas fa-external-link-alt"></i> PPT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md animate-fadeIn delay-500">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Assets/clear-trip-logo.png"
+                            alt="Project 2" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">ClearTrip</h3>
+                        <div class="flex justify-between items mb-1">
+                            <!-- <span class="text-blue-500 text-sm">[Dec 2023 - Jan 2024]</span> -->
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            For Cleartrip, I focused on enhancing the travel planning experience by addressing issues
+                            like inaccurate room details, confusing pricing, and limited itinerary management. I
+                            proposed the Hyper-Personalized Itinerary Builder to create tailored travel plans with
+                            real-time activity suggestions and verified hotel details, and the Real-Time Travel
+                            Assistant to provide live updates, predictive cost management, and multilingual support.
+                            These solutions aimed to improve user satisfaction and boost booking conversions.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-500 hover:text-blue-700">
+                                <i class="fas fa-external-link-alt"></i> PPT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="text-center mt-12 animate-fadeIn delay-500">
+                <a href="#"
+                    class="inline-block border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-6 py-3 rounded-lg transition">
+                    View All Projects
+                </a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <!-- <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 animate-fadeIn">My <span
+                    class="text-blue-500">Skills</span></h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto animate-fadeIn delay-100">
+                I've worked with a variety of technologies in the web development world. Here are my core competencies.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="animate-fadeIn delay-200">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <i class="fas fa-laptop-code text-blue-500 mr-3"></i> Frontend
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>HTML/CSS</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>JavaScript</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>React</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Vue.js</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animate-fadeIn delay-300">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <i class="fas fa-server text-blue-500 mr-3"></i> Backend
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Node.js</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Express</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Python</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>PHP</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-fadeIn delay-400">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <i class="fas fa-database text-blue-500 mr-3"></i> Database
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>MongoDB</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>MySQL</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>PostgreSQL</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Firebase</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animate-fadeIn delay-500">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <i class="fas fa-tools text-blue-500 mr-3"></i> Tools
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Git</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Docker</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>AWS</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Figma</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 animate-fadeIn">My <span
+                    class="text-blue-500">Achievents</span></h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto animate-fadeIn delay-100">
+                My professional path and educational background that shaped my expertise.
+            </p>
+
+            <div class="flex flex-col md:flex-row">
+                <!-- Experience -->
+                <div class="md:w-1/2 md:pr-8 mb-12 md:mb-0 animate-fadeIn delay-200">
+                    <h3 class="text-2xl font-semibold mb-8 flex items-center">
+                        <i class="fas fa-briefcase text-blue-500 mr-4 text-3xl"></i> Certifications
+                    </h3>
+
+                    <div class="relative">
+                        <!-- Timeline -->
+                        <div class="border-l-2 border-blue-500 absolute h-full top-0 left-6"></div>
+
+                        <!-- Experience 1 -->
+                        <div class="mb-8 pl-10 relative">
+                            <div class="absolute w-4 h-4 bg-blue-500 rounded-full left-6 -mt-1"></div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-lg">Fundamentals of Digital Marketing by Google</h4>
+                                    <!-- <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">2021 -
+                                        Present</span> -->
+                                </div>
+                                <p class="text-blue-500 mb-2">
+                                    <a href="https://drive.google.com/file/d/1zOvUWvl3Bgd8IpJH-ZBSEMAZX93v6u2I/view?usp=sharing"
+                                        target="_blank" class="hover:underline">View Credentials</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Certification 2 -->
+                        <div class="mb-8 pl-10 relative">
+                            <div class="absolute w-4 h-4 bg-blue-500 rounded-full left-6 -mt-1"></div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-lg">Accenture Data Analytics and Visualization</h4>
+                                </div>
+                                <p class="text-blue-500 mb-2">
+                                    <a href="https://drive.google.com/file/d/1h47bN298DJ6CiC8fXZyPiTh4Ezj-X4jf/view?usp=drivesdk"
+                                        target="_blank" class="hover:underline">View Credentials</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Certification 3 -->
+                        <div class="mb-8 pl-10 relative">
+                            <div class="absolute w-4 h-4 bg-blue-500 rounded-full left-6 -mt-1"></div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-lg">Google Analytics Certification</h4>
+                                </div>
+                                <p class="text-blue-500 mb-2">
+                                    <a href="https://skillshop.credential.net/8ffa20c8-74be-4120-b66c-b406af154f31#acc.D06yPer7"
+                                        target="_blank" class="hover:underline">View Credentials</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Certification 4 -->
+                        <div class="pl-10 relative">
+                            <div class="absolute w-4 h-4 bg-blue-500 rounded-full left-6 -mt-1"></div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-lg">Excel and Virtual Experience Program by JPMorgan</h4>
+                                </div>
+                                <p class="text-blue-500 mb-2">
+                                    <a href="https://drive.google.com/file/d/1h76Mj7oYVTqpntQ4gmff7qoEvsdo_X9G/view?usp=drivesdk"
+                                        target="_blank" class="hover:underline">View Credentials</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="md:w-1/2 md:pl-8 animate-fadeIn delay-300">
+                    <h3 class="text-2xl font-semibold mb-8 flex items-center">
+                        <i class="fas fa-graduation-cap text-blue-500 mr-4 text-3xl"></i> Education
+                    </h3>
+
+                    <div class="relative">
+                        <!-- Timeline -->
+                        <div class="border-l-2 border-blue-500 absolute h-full top-0 left-6"></div>
+
+                        <!-- Education 1 -->
+                        <div class="mb-8 pl-10 relative">
+                            <div class="absolute w-4 h-4 bg-blue-500 rounded-full left-6 -mt-1"></div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-lg">Bachelor of Computer Application</h4>
+                                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">2021 - 2024</span>
+                                </div>
+                                <p class="text-blue-500 mb-2">Arka Jain University</p>
+                                <p class="text-gray-600">
+                                    CGPA: 9.14<br>
+                                    Jharkhand, India
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Education 2 -->
+                        <div class="mb-8 pl-10 relative">
+                            <div class="absolute w-4 h-4 bg-blue-500 rounded-full left-6 -mt-1"></div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-lg">Class XII</h4>
+                                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">2018 - 2020</span>
+                                </div>
+                                <p class="text-blue-500 mb-2">D.A.V. Public School, Jamshedpur</p>
+                                <p class="text-gray-600">
+                                    CBSE | Percentage: 85.7%<br>
+                                    Jharkhand, India
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Education 3 -->
+                        <div class="pl-10 relative">
+                            <div class="absolute w-4 h-4 bg-blue-500 rounded-full left-6 -mt-1"></div>
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-lg">Class X</h4>
+                                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">2018</span>
+                                </div>
+                                <p class="text-blue-500 mb-2">B.S.S. Pranav Children World, Jamshedpur</p>
+                                <p class="text-gray-600">
+                                    CBSE | Percentage: 94.2%<br>
+                                    Jharkhand, India
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <!-- <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 animate-fadeIn">Client <span
+                    class="text-blue-500">Testimonials</span></h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto animate-fadeIn delay-100">
+                What people I've worked with say about me and my work.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm animate-fadeIn delay-200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+                                alt="Sarah Johnson" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-blue-500 text-sm">CEO, TechStart</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "John transformed our outdated website into a modern, user-friendly platform. His attention to
+                        detail and problem-solving skills are exceptional. Our conversion rates increased by 40% after
+                        the redesign."
+                    </p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm animate-fadeIn delay-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                                alt="Michael Chen" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-blue-500 text-sm">CTO, Digital Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Working with John on our SaaS product was a game-changer. He not only delivered the project
+                        ahead of schedule but also suggested improvements we hadn't considered. His technical expertise
+                        is matched only by his professionalism."
+                    </p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm animate-fadeIn delay-400">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a05d5ae7ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                                alt="Emily Rodriguez" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Emily Rodriguez</h4>
+                            <p class="text-blue-500 text-sm">Marketing Director, BrandCo</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "John built our e-commerce platform from scratch, handling everything from database design to
+                        frontend implementation. The site has been running flawlessly for two years with minimal
+                        maintenance needed. Highly recommend!"
+                    </p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 animate-fadeIn">Get In <span
+                    class="text-blue-500">Touch</span></h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto animate-fadeIn delay-100">
+                Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
+            </p>
+
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-8 animate-fadeIn delay-200">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p class="text-gray-600">singh.anamike5007@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Phone</h4>
+                                    <p class="text-gray-600">+91 8789192218</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Location</h4>
+                                    <p class="text-gray-600">Jamshedpur, Jharkhand</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <h4 class="font-semibold mb-4">Follow Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/singhanamika1508" class="bg-blue-500 hover:bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/anamika-singh-7b6a2b278"
+                                    class="bg-blue-500 hover:bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="mailto:singh.anamika5007@gmail.com" class="bg-blue-500 hover:bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fa fa-envelope"></i>
+                                </a>
+                                <!-- <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 md:pl-8 animate-fadeIn delay-300">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold mb-6">Send Me a Message</h3>
+                        <form id="contactForm">
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 mb-2">Name</label>
+                                <input type="text" id="name"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                                <input type="text" id="subject"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 mb-2">Message</label>
+                                <textarea id="message" rows="5"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    required></textarea>
+                            </div>
+                            <button type="submit"
+                                class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition w-full">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-5">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-center items-center text-center">
+
+                <div>
+                    <div class="flex justify-center space-x-4 mb-2">
+                        <a href="https://github.com/singhanamika1508" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/anamika-singh-7b6a2b278" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="mailto:singh.anamika5007@gmail.com" class="text-gray-400 hover:text-white transition">
+                            <i class="fa fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-2 text-center text-gray-400">
+                <p>&copy; 2024 Anamika Singh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Highlight active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', function () {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (pageYOffset >= (sectionTop - 300)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Here you would typically send the data to a server
+            // For this example, we'll just show an alert
+            alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
+
+            // Reset form
+            this.reset();
+        });
+
+        // Add animation classes on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>
